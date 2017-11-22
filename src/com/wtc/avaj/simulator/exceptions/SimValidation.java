@@ -1,4 +1,4 @@
-package com.wtc.avaj.simulator.Exceptions;
+package com.wtc.avaj.simulator.exceptions;
 
 public class SimValidation extends Exception {
 

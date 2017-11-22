@@ -2,13 +2,13 @@ package com.wtc.avaj.simulator;
 
 public class WeatherProvider {
     private static WeatherProvider weatherProvider = null;
-    private static String weather[];
+    private static String weather[] = {"RAIN", "FOG", "SUN", "SNOW"};
 
     private WeatherProvider(){
 
     }
 
-    private static WeatherProvider getProvider(){
+    public static WeatherProvider getProvider(){
         if (weatherProvider == null)
         {
             synchronized (WeatherProvider.class) {
@@ -19,6 +19,6 @@ public class WeatherProvider {
     }
 
     public String getCurrentWeather(Coordinates coordinates){
-        return "";
+        return weather[(int)(Math.random() * 4)];
     }
 }
