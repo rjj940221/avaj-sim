@@ -33,7 +33,7 @@ public class Simulator {
                 if (num_sim < 0) {
                     throw new SimValidation("Negative number of simulations");
                 }
-                Pattern p = Pattern.compile("Baloon|JetPlane|Helicopter B|J|H\\d+ \\d+ \\d+ \\d+");
+                Pattern p = Pattern.compile("^(?:Baloon|JetPlane|Helicopter) [BJH]\\d+ \\d+ \\d+ \\d+$");
                 Matcher m;
                 while ((line = br.readLine()) != null) {
                     lineidx++;

@@ -32,13 +32,13 @@ public class Logger {
 
     public void flyerLog(Flyable flyer, String msg){
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        printWriter.printf("%s: %s", flyer.toString(), msg);
-        printWriter.close();
+        printWriter.printf("%s: %s\n", flyer.toString(), msg);
+        //printWriter.close();
     }
 
     public void towerLog(String msg){
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        printWriter.printf("Tower says: %s",  msg);
-        printWriter.close();
+        printWriter.printf("Tower says: %s\n",  msg);
+        //printWriter.close();
     }
 }
