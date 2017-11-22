@@ -19,7 +19,21 @@ public class WeatherProvider {
     }
 
     public String getCurrentWeather(Coordinates coordinates){
-        int idx = (int)(Math.random() * 4);
+        int idx = 0;
+        if (coordinates.getHeight() > 70) {
+            if ((int) (Math.random() * 4) == 1)
+                idx = 3;
+            else
+                idx = (int) (Math.random() * 4);
+        }
+        else if(coordinates.getHeight() > 50) {
+            if ((int) (Math.random() * 2) == 1)
+                idx = 3;
+            else
+                idx = (int) (Math.random() * 4);
+        }
+        else
+            idx = (int) (Math.random() * 4);
         return weather[idx];
     }
 }
