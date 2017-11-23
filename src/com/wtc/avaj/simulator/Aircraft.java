@@ -15,4 +15,6 @@ public class Aircraft {
     private long nextId(){
         return ++idCounter;
     }
+
+    public boolean isLanded(){return coordinates.getHeight() > 0;}
 }

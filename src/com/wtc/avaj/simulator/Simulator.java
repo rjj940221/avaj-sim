@@ -1,7 +1,6 @@
 package com.wtc.avaj.simulator;
 
 import com.wtc.avaj.simulator.exceptions.SimValidation;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -60,6 +59,7 @@ public class Simulator {
             e.printStackTrace();
         } catch (Exception e) {
             System.out.println("Simulation quit unexpectedly");
+            e.printStackTrace();
         }
     }
 }

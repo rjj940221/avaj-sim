@@ -2,8 +2,8 @@ package com.wtc.avaj.simulator.tower;
 
 import com.wtc.avaj.simulator.Flyable;
 import com.wtc.avaj.simulator.Logger;
-
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public abstract class Tower {
@@ -24,8 +24,12 @@ public abstract class Tower {
     }
 
     protected void conditionsChange() {
-        for (int i = 0; i < observer.size(); i++) {
+        int size;
+        for (int i = 0; i < observer.size(); ) {
+            size = observer.size();
             observer.get(i).updateConditions();
+            if (size == observer.size())
+                i++;
         }
     }
 }
